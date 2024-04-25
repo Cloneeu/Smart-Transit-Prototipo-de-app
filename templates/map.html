@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Asegúrate de incluir el CSS de Google Maps si es necesario -->
+</head>
+<body>
+    <div id="mapid"></div>
+    <div class="map-buttons">
+        <button onclick="alert('Buscar')"><img src="{{ url_for('static', filename='images/search-icon.png') }}" alt="Buscar" /></button>
+        <button onclick="alert('Inicio')"><img src="{{ url_for('static', filename='images/home-icon.png') }}" alt="Inicio" /></button>
+        <button onclick="alert('Notificaciones')"><img src="{{ url_for('static', filename='images/notification-icon.png') }}" alt="Notificaciones" /></button>
+    </div>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxPagilUzzylVyiT5zr9ngaUXGpoW9px0&callback=initMap"></script>
+</body>
+</html>
